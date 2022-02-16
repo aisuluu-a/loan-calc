@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (amount.value === '' || interest.value === '' || years.value === '') {
             alert('Please, fill the fields');
-            
+            document.querySelector('#output').style.display = 'none';
 
         } else {
 
@@ -27,9 +27,9 @@ document.addEventListener('DOMContentLoaded', () => {
               document.querySelector('#loader').style.display = 'none';
               
             }, 1000)
-            
+           document.querySelector('#output').style.display = 'block'; 
           };
-          document.querySelector('#output').style.display = 'block';
+          
           const amountVal = Number(amount.value);
           const interestVal = Number(interest.value);
           const yearsVal = Number(years.value);
