@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const total = document.querySelector('#totally');
     const fees = document.querySelector('#fees');
     
-  
+
   
   document.querySelector('#loan-form').addEventListener('submit', (e) => {
         
@@ -16,8 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
   
         if (amount.value === '' || interest.value === '' || years.value === '') {
             alert('Please, fill the fields');
+            
+
         } else {
-         
+
+          document.querySelector('#loader').style.display = 'block';
+
+          
+          setTimeout(function() {
+              document.querySelector('#loader').style.display = 'none';
+              
+            }, 500)
+            
+          };
+          document.querySelector('#output').style.display = 'block';
           const amountVal = Number(amount.value);
           const interestVal = Number(interest.value);
           const yearsVal = Number(years.value);
@@ -37,5 +49,5 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
 
-    });
+    );
   })
