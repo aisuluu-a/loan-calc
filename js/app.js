@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
           setTimeout(function() {
               document.querySelector('#loader').style.display = 'none';
               
-            }, 500)
+            }, 1000)
             
           };
           document.querySelector('#output').style.display = 'block';
